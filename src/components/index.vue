@@ -207,6 +207,7 @@
                     align-items: flex-start;
                     flex-wrap: nowrap;
                     flex-direction: row;
+                    width: 100%;
                 }
             }
         }
