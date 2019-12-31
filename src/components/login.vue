@@ -3,7 +3,7 @@
         <img src="../assets/item4.png" class="bg">
         <div class="cont">
 
-            <h2>欢迎来到Freeter后台</h2>
+            <h2>freeter 客服系统</h2>
             <div class="formContent">
                 <el-form
                         :model="ruleForm"
@@ -95,7 +95,7 @@
                                     message: "登录成功",
                                     type: "success"
                                 });
-                                this.$router.push("/index");
+                                this.$router.push("/message");
                                 sessionStorage.setItem("account", this.ruleForm.userName);
                                 sessionStorage.setItem("password", this.ruleForm.password);
                                 sessionStorage.setItem("userinfo", JSON.stringify(res.data));

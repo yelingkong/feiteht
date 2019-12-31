@@ -1,49 +1,50 @@
 <template>
     <div class="container">
-        <div class="headTop">
-            <el-row>
-                <el-col :span="6">
-                    <div class="title">欢迎来到Freeter后台</div>
-                </el-col>
-                <el-col :span="18">
-                    <div class="header">
-                        <div class="userInfo">
-              <span class="img">
-                <img
-                        src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1079592840,2327344920&fm=27&gp=0.jpg"
-                        alt
-                >
-              </span>
-                            <span class="account">欢迎&nbsp;,&nbsp;{{this.account}}</span>
-                            <el-badge v-if="totalUnreadCount" :value="totalUnreadCount" class="item">
-                                <el-button @click="gomessage" size="small">消息</el-button>
-                            </el-badge>
-                            <el-button v-else @click="gomessage" size="small">消息</el-button>
-                            <span class="loginOut" @click="loginOut()">退出</span>
-                        </div>
-                    </div>
-                </el-col>
-            </el-row>
-        </div>
+        <router-view></router-view>
+<!--        <div class="headTop">-->
+<!--            <el-row>-->
+<!--                <el-col :span="6">-->
+<!--                    <div class="title">欢迎来到Freeter后台</div>-->
+<!--                </el-col>-->
+<!--                <el-col :span="18">-->
+<!--                    <div class="header">-->
+<!--                        <div class="userInfo">-->
+<!--              <span class="img">-->
+<!--                <img-->
+<!--                        src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=1079592840,2327344920&fm=27&gp=0.jpg"-->
+<!--                        alt-->
+<!--                >-->
+<!--              </span>-->
+<!--                            <span class="account">欢迎&nbsp;,&nbsp;{{this.account}}</span>-->
+<!--                            <el-badge v-if="totalUnreadCount" :value="totalUnreadCount" class="item">-->
+<!--                                <el-button @click="gomessage" size="small">消息</el-button>-->
+<!--                            </el-badge>-->
+<!--                            <el-button v-else @click="gomessage" size="small">消息</el-button>-->
+<!--                            <span class="loginOut" @click="loginOut()">退出</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </el-col>-->
+<!--            </el-row>-->
+<!--        </div>-->
 
-        <el-row>
-            <el-col :span="4">
-                <div class="sidebar" :style="{'height':(windowHeight - 60)+'px'}">
-                    <sideBar></sideBar>
-                </div>
-            </el-col>
-            <el-col :span="20">
-                <div class="content">
-                    <breadCrumb></breadCrumb>
-                    <div class="cont-wrapper" :style="{'height':(windowHeight-124)+'px'}">
-                        <div class="contInfo">
-                            <router-view></router-view>
-                        </div>
-                    </div>
-                </div>
-            </el-col>
-        </el-row>
-        <imlogin v-show="false" v-if="userinfo"></imlogin>
+<!--        <el-row>-->
+<!--            <el-col :span="4">-->
+<!--                <div class="sidebar" :style="{'height':(windowHeight - 60)+'px'}">-->
+<!--                    <sideBar></sideBar>-->
+<!--                </div>-->
+<!--            </el-col>-->
+<!--            <el-col :span="20">-->
+<!--                <div class="content">-->
+<!--                    <breadCrumb></breadCrumb>-->
+<!--                    <div class="cont-wrapper" :style="{'height':(windowHeight-124)+'px'}">-->
+<!--                        <div class="contInfo">-->
+<!--                           -->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </el-col>-->
+<!--        </el-row>-->
+<!--        <imlogin v-show="false" v-if="userinfo"></imlogin>-->
     </div>
 </template>
 
@@ -94,6 +95,11 @@
 
 <style lang="scss" scoped>
     .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
         // 顶部
         .headTop {
             position: fixed;
