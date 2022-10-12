@@ -9,7 +9,7 @@
   "dependencies": {
     "axios": "^0.18.1",
     "core-js": "^2.6.11",
-    "cos-js-sdk-v5": "^0.5.17",
+    "cos-js-sdk-v5": "^1.4.6",
     "echarts": "^4.5.0",
     "element-china-area-data": "^4.1.2",
     "element-ui": "^2.13.0",
